@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <unistd.h>
 
-#define UNUSED(x) (void) (x)
+#define UNUSED(x) (void)(x)
 #define BUFF_SIZE 1024
 
 /* Flags */
@@ -27,8 +27,8 @@
 struct fmt
 {
 	char fmt;
-	int (*fn) (va_list, chat[]; int; int; int; int);
-}
+	int (*fn)(va_list, chat[], int, int, int, int);
+};
 
 /**
  * typedef struct fmt fmt_t - Struct op
@@ -36,10 +36,11 @@ struct fmt
  * @fmt: format
  * @fmt_t: faunction associated
  */
-typedef struct fmt fmt_t
+typedef struct fmt fmt_t;
+
 int _printf(const char *format, ...);
 int handle_print(const chat *fmt, int *i,
-va_list list, char buffer[], int flag, int width, int precision, int size);
+		va_list list, char buffer[], int flag, int width, int precision, int size);
 
 /********* FUNCTIONS ***********/
 
